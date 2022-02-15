@@ -36,7 +36,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "    {\r\n        \"title\": \"DJI Mini 2\",\r\n        \"description\": \"Ultralight and Foldable Drone Quadrcopter\",\r\n        \"price\": 449.0,\r\n        \"inventory_quantity\": 15\r\n    }",
+					"raw": "    {\r\n        \"title\": \"Oculus Quest 2\",\r\n        \"description\": \"Advanced All-In-One Virtual Reality Headset\",\r\n        \"price\": 299.00,\r\n        \"inventory_quantity\": 15,\r\n        \"image_link\": \"https://m.media-amazon.com/images/I/61kwRNPtMpL._SL1500_.jpg\"\r\n    }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -94,7 +94,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"title\": \"DJI Air S2\",\r\n    \"description\": \"Drone Quadcopter with Gimbal Camera\",\r\n    \"price\": 999.00,\r\n    \"inventory_quantity\": 20\r\n}",
+					"raw": "    {\r\n        \"id\": 5,\r\n        \"title\": \"DJI Mini 2\",\r\n        \"description\": \"Ultralight and Foldable Drone Quadrcopter\",\r\n        \"price\": 449.0,\r\n        \"inventory_quantity\": 15,\r\n        \"image_link\": \"https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/HPFW2_AV3?wid=1144&hei=1144&fmt=jpeg&qlt=95&.v=1605811615000\"\r\n    }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -102,7 +102,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/products/6/",
+					"raw": "http://127.0.0.1:8000/api/products/5/",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -114,7 +114,7 @@
 					"path": [
 						"api",
 						"products",
-						"6",
+						"5",
 						""
 					]
 				}
@@ -127,7 +127,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:8000/api/products/7/",
+					"raw": "http://127.0.0.1:8000/api/products/8/",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -139,7 +139,7 @@
 					"path": [
 						"api",
 						"products",
-						"7",
+						"8",
 						""
 					]
 				}
