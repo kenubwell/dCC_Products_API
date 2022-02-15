@@ -1,4 +1,3 @@
-from itertools import product
 from django.shortcuts import get_object_or_404
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -21,9 +20,18 @@ def products_list(request):
         return Response(serializers.data, status=status.HTTP_201_CREATED)
 
 
-@api_view(['GET'])
+@api_view(['GET', 'PUT', 'DELETE'])
 def products_detail(request, pk): #this pk allows for input for the product id
 
-    product = get_object_or_404(Product, pk=pk)  #since imported django shortcut we can use this function to check for errors. Just have to enter (Model, Value)
-    serializer = ProductSerializer(product)
-    return Response(serializer.data, status=status.HTTP_200_OK)  
+    product = get_object_or_404(Product, pk=pk)  #since I imported django shortcut (above) we can use this function to check for errors. Just have to enter (Model, Value)
+    if request.method == 'GET':
+        serializer = ProductSerializer(product)
+        return Response(serializer.data, status=status.HTTP_200_OK)  
+    elif request.method == 'PUT':
+        serializer = ProductSerializer(product, data=request.data) #this compares current product data and takes in requested data from user
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_200_OK)
+    elif request.method == 'DELETE':
+        product.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
