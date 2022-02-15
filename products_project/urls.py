@@ -13,6 +13,10 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+#(2.5 points) As a developer, I want my API to serve content on the following urls paths:
+# ‘127.0.0.1:8000/api/products/'  AND  ‘127.0.0.1:8000/api/products/<int:pk>/’
+    # line 25 supports this user story
+
 from django.contrib import admin
 from django.urls import path, include
 
