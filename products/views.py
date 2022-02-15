@@ -1,3 +1,19 @@
+#(5 points) As a developer, I want to create a GET endpoint the responds with a 200 success status code and all of the products within the Product table.
+    # line 25 and lines 28-31 
+#(5 points) As a developer, I want to create a GET by id endpoint that does the following things:
+#Accepts a value from the request’s URL (The product ID) | Returns a 200 status code. | Responds with the product in the database that has the id that was sent through the URL.
+    # line 39 and lines 43-45 
+# (5 points) As a developer, I want to create a POST endpoint that does the following things:
+# Accepts a body object from the request in the form of a Product model | Adds the new product to the database | Returns a 201 status code | Responds with the newly created product object.
+    # line 25 and lines 32-36 
+# (5 points) As a developer, I want to create a PUT endpoint that does the following things:
+# Accepts a value from the request’s URL (The product ID) | Accepts a body object from the request in the form of a Product model | 
+# Finds the product in the table and updates with the properties that were sent | Returns a 200 status code | Responds with the newly updated product object.
+    # line 39 and lines 46-50 
+# (5 points) As a developer, I want to create a DELETE endpoint that does the following things:
+# Accepts a value from the request’s URL | Returns a 204 status code (NO CONTENT).
+    # line 39 and lines 51-53
+
 from django.shortcuts import get_object_or_404
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
