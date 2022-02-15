@@ -67,6 +67,11 @@ TEMPLATES = [
     },
 ]
 
+#this code reverts the Django default of having all values represented as a string
+REST_FRAMEWORK = {
+    'COERCE_DECIMAL_TO_STRING': False
+}
+
 WSGI_APPLICATION = 'products_project.wsgi.application'
 
 
