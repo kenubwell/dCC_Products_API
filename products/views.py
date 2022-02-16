@@ -28,7 +28,7 @@ from .models import Product
 class ProductsList(APIView):
 #A class-based view that lists all products or creates a new product
 
-    def get (self, request, format=None):
+    def get(self, request, format=None):
         products = Product.objects.all()
         serializers = ProductSerializer(products, many=True) #this is going to take our product table and convert to json
         return Response(serializers.data, status=status.HTTP_200_OK)
